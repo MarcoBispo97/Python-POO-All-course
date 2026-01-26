@@ -13,7 +13,7 @@ class Customer:
 		self.favorite_dessert = favorite_dessert
 
 class Cake:
-	def __init__(self, flavor, price, quality):
+	def __init__(self, flavor, price, quality): 
 		self.flavor = flavor
 		self.price = price
 		self.quality = quality
