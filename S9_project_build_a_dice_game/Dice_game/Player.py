@@ -3,7 +3,7 @@ class Player:
     def __init__(self, die, is_computer=False):
         self._die = die
         self._is_computer = is_computer
-        self._counter = 10
+        self._counter = 4
 
     @property
     def die(self):
@@ -13,6 +13,10 @@ class Player:
     def counter(self):
         return self._counter
     
+    @property
+    def is_computer(self):
+        return self._is_computer
+
     def increment_counter(self):
         self._counter += 1
 
