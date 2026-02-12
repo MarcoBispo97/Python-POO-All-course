@@ -1,6 +1,7 @@
 from Player import Player
 from Die import Die
 
+
 class DiceGame:
 
     def __init__(self, player, computer):
@@ -25,16 +26,16 @@ class DiceGame:
         player_value = self._player.roll_die()
         computer_value = self._computer.roll_die()
 
-        #Show the values
+        # Show the values
         self.show_dice(player_value, computer_value)
 
         # Determine the winner and loser
         if player_value > computer_value:
             print("😁 You win this round!🥳 ")
-            self.update_counters(winner = self._player, loser=self._computer)
+            self.update_counters(winner=self._player, loser=self._computer)
         elif player_value < computer_value:
             print("🙁 Computer wins this round! 🤖. Try again.")
-            self.update_counters(winner = self._computer, loser=self._player)
+            self.update_counters(winner=self._computer, loser=self._player)
         else:
             print("It's a tie!")
 
@@ -65,7 +66,7 @@ class DiceGame:
             return True
         else:
             return False
-    
+
     def show_game_over_message(self, winner):
         if winner.is_computer:
             print("\n===============================")

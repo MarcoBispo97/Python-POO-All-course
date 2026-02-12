@@ -3,6 +3,7 @@ Course: Python OOP - Object Oriented Programming for Beginners
 By: Estefania Cassingena Navone
 """
 
+
 class Movie:
 
     def __init__(self, title, rating):
@@ -13,7 +14,7 @@ class Movie:
     def rating(self):
         print("Calling the getter...")
         return self._rating
-    
+
     @rating.setter
     def rating(self, new_rating):
         print("Calling the setter...")
@@ -29,5 +30,5 @@ print(favorite_movie.rating)
 favorite_movie.rating = 4.5
 print(favorite_movie.rating)
 
-favorite_movie.rating = -5.6 # Invalid value.
+favorite_movie.rating = -5.6  # Invalid value.
 print(favorite_movie.rating)

@@ -3,6 +3,7 @@ Course: Python OOP - Object Oriented Programming for Beginners
 By: Estefania Cassingena Navone
 """
 
+
 class Circle:
 
     def __init__(self, radius):
@@ -22,11 +23,11 @@ my_circle = Circle(5.0)
 
 print(my_circle.get_radius())
 
-my_circle.set_radius(0) # This will not change the value.
+my_circle.set_radius(0)  # This will not change the value.
 print(my_circle.get_radius())
 
-my_circle.set_radius("Hello, World!") # This will not change the value.
+my_circle.set_radius("Hello, World!")  # This will not change the value.
 print(my_circle.get_radius())
 
-my_circle.set_radius(10.5) # This will change the value.
+my_circle.set_radius(10.5)  # This will change the value.
 print(my_circle.get_radius())

@@ -8,11 +8,11 @@ class Player:
     @property
     def die(self):
         return self._die
-    
+
     @property
     def counter(self):
         return self._counter
-    
+
     @property
     def is_computer(self):
         return self._is_computer
@@ -25,7 +25,8 @@ class Player:
 
     def roll_die(self):
         return self._die.roll()
-    
+
+
 # # Testing the Player class
 # if __name__ == "__main__":
 #     from Die import Die
@@ -51,4 +52,3 @@ class Player:
 #         print(f"Player counter after increment: {player.counter}")
 #         player.decrement_counter()
 #         print(f"Player counter after decrement: {player.counter}")
-

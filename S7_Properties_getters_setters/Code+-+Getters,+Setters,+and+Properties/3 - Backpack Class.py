@@ -3,6 +3,7 @@ Course: Python OOP - Object Oriented Programming for Beginners
 By: Estefania Cassingena Navone
 """
 
+
 class Backpack:
 
     def __init__(self):
@@ -21,7 +22,7 @@ class Backpack:
 my_backpack = Backpack()
 print(my_backpack.get_items())
 
-my_backpack.set_items("Hello, World!") # Invalid value
+my_backpack.set_items("Hello, World!")  # Invalid value
 my_backpack.set_items(["Water Bottle", "Sleeping Bag", "First Aid Kit"])
 
 print(my_backpack.get_items())
