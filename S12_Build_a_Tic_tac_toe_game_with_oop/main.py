@@ -29,11 +29,11 @@ class Move:
 # row1:| 1 | 2 | 3 |
 # row2:| 4 | 5 | 6 |
 # row3:| 7 | 8 | 9 |
-move = Move(5)
-print(move.is_valid()) # True
-print(move.get_row()) # 1
-print(move.get_column()) # 1
-move = Move(10)
-print(move.is_valid()) # False
-print(move.get_row()) # None
-print(move.get_column()) # None
+# move = Move(5)
+# print(move.is_valid()) # True
+# print(move.get_row()) # 1
+# print(move.get_column()) # 1
+# move = Move(10)
+# print(move.is_valid()) # False
+# print(move.get_row()) # None
+# print(move.get_column()) # None

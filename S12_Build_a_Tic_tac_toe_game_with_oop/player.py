@@ -46,8 +46,8 @@ class Player:
         print("Computer move (1-9): ", move.value)
         return move
 
-player = Player() #Human
-computer = Player(False)
-move_p = player.get_move()
-move_c = computer.get_move()
-print(move_c.value)
+# player = Player() #Human
+# computer = Player(False)
+# move_p = player.get_move()
+# move_c = computer.get_move()
+# print(move_c.value)
