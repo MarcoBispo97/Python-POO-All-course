@@ -1,19 +1,16 @@
 from player import Player
 from main import Move
-from player import Player
+
+
 class Board:
 
     EMPTY_CELL = 0
 
     def __init__(self):
-        self.game_board = [
-            [0,0,0],
-            [0,0,0],
-            [0,0,0]
-            ]
-        
+        self.game_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
     def print_board(self):
-        print('\n')
+        print("\n")
         self.print_board_with_positions()
 
     def print_board_with_positions(self):
@@ -39,17 +36,19 @@ class Board:
         if value == Board.EMPTY_CELL:
             self.game_board[row][col] = player.marker
         else:
-            print("This position is already ttaken. Please enter another one")
+            print("❌ This position is already taken. Please enter another one")
 
     def check_is_game_over(self, player, last_move):
-        return (self.check_row(player, last_move)
-                or self.check_column(player, last_move)
-                or self.check_diagonal(player)
-                or self.check_antidiagonal(player))
+        return (
+            self.check_row(player, last_move)
+            or self.check_column(player, last_move)
+            or self.check_diagonal(player)
+            or self.check_antidiagonal(player)
+        )
 
     def check_row(self, player, last_move):
         row_index = last_move.get_row()
-        board_row = self.game_board[row_index] #["0", 0 , "X"]
+        board_row = self.game_board[row_index]  # ["0", 0 , "X"]
         return board_row.count(player.marker) == 3
 
     def check_column(self, player, last_move):
@@ -60,7 +59,7 @@ class Board:
                 markers_count += 1
 
         return markers_count == 3
-    
+
     def check_diagonal(self, player):
         markers_count = 0
         for i in range(3):
@@ -71,11 +70,11 @@ class Board:
     def check_antidiagonal(self, player):
         markers_count = 0
         for i in range(3):
-            if self.game_board[i][2-i] == player.marker:
+            if self.game_board[i][2 - i] == player.marker:
                 markers_count += 1
         return markers_count == 3
 
-    def chek_is_tie(self):
+    def check_is_tie(self):
         empty_counter = 0
 
         for row in self.game_board:
@@ -84,21 +83,40 @@ class Board:
         return empty_counter == 0
 
     def reset_board(self):
-        self.game_board = [
-            [0,0,0],
-            [0,0,0],
-            [0,0,0]
-            ]
-        
+        self.game_board = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
 
-board = Board()
-player = Player()
 
-move1 = player.get_move()
-move2 = player.get_move()
-move3 = player.get_move()
-board.submit_move(player,move1)
-board.submit_move(player, move2)
-board.submit_move(player, move3)
-board.print_board()
-print(board.check_is_game_over(player, move3))
+# board = Board()
+# player = Player()
+# computer = Player(False)
+
+# game_over = False
+
+# while not game_over:
+#     human_move = player.get_move()
+#     board.submit_move(player, human_move)
+#     board.print_board()
+
+#     if board.check_is_game_over(player, human_move):
+#         print("You won!")
+#         game_over = True
+#         break
+
+#     if board.check_is_tie():
+#         print("It's a tie!")
+#         game_over = True
+#         break
+
+#     computer_move = computer.get_move()
+#     board.submit_move(computer, computer_move)
+#     board.print_board()
+
+#     if board.check_is_game_over(computer, computer_move):
+#         print("Computer won!")
+#         game_over = True
+#         break
+
+#     if board.check_is_tie():
+#         print("It's a tie!")
+#         game_over = True
+#         break
