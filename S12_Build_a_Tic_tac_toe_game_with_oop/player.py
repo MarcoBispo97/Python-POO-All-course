@@ -11,7 +11,7 @@ class Player:
     def __init__(self, is_human=True):
         self._is_human = is_human
 
-        if is_human:
+        if is_human: 
             self._marker = Player.PLAYER_MARKER
         else:
             self._marker = Player.COMPUTER_MARKER
