@@ -5,6 +5,7 @@ By: Estefania Cassingena Navone
 
 # Example before defining the __bool__() method.
 
+
 class BankAccount:
 
     def __init__(self, account_owner, account_number, initial_balance):
@@ -20,6 +21,7 @@ class BankAccount:
             self.balance -= amount
         else:
             print("Insufficient funds.")
+
 
 my_account = BankAccount("Nora Nav", "356-2456-2455", 45045.23)
 print(bool(my_account))
@@ -40,6 +42,7 @@ else:
 
 # Example after defining the __bool__() method.
 
+
 class BankAccount:
 
     def __init__(self, account_owner, account_number, initial_balance):
@@ -58,6 +61,7 @@ class BankAccount:
 
     def __bool__(self):
         return self.balance > 0
+
 
 my_account = BankAccount("Nora Nav", "356-2456-2455", 45045.23)
 print(bool(my_account))

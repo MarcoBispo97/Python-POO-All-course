@@ -20,6 +20,7 @@ print([4, 5, 6] > [1, 2, 3, 4])
 
 # Example: Comparing instances of the Circle Class
 
+
 class Circle:
 
     def __init__(self, radius, color):
@@ -30,23 +31,20 @@ class Circle:
         return self.radius < other.radius
 
     def __le__(self, other):
-        return (self.radius <= other.radius
-                and self.color == other.color)
+        return self.radius <= other.radius and self.color == other.color
 
     def __gt__(self, other):
         return self.radius > other.radius
 
     def __ge__(self, other):
-        return (self.radius >= other.radius
-                and self.color == other.color)
+        return self.radius >= other.radius and self.color == other.color
 
     def __eq__(self, other):
-        return (self.radius == other.radius
-                and self.color == self.color)
+        return self.radius == other.radius and self.color == self.color
 
     def __ne__(self, other):
-        return (self.radius != other.radius
-                or self.radius != other.radius)
+        return self.radius != other.radius or self.radius != other.radius
+
 
 circleA = Circle(5, "Blue")
 circleB = Circle(5, "Green")

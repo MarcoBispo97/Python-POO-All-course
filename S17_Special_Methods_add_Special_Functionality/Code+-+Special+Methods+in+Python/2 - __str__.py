@@ -5,6 +5,7 @@ By: Estefania Cassingena Navone
 
 # Example: Point2D
 
+
 class Point2D:
 
     def __init__(self, x, y):
@@ -21,6 +22,7 @@ print(my_point)
 
 # Example: Student
 
+
 class Student:
 
     def __init__(self, student_id, name, age, gpa):
@@ -30,10 +32,12 @@ class Student:
         self.gpa = gpa
 
     def __str__(self):
-        return f"Student: {self.name} " \
-               f"| Student ID: {self.student_id} " \
-               f"| Age: {self.age} " \
-               f"| GPA: {selg.gpa}"
+        return (
+            f"Student: {self.name} "
+            f"| Student ID: {self.student_id} "
+            f"| Age: {self.age} "
+            f"| GPA: {selg.gpa}"
+        )
 
 
 student = Student("42AB9", "Nora Nav", 34, 3.76)

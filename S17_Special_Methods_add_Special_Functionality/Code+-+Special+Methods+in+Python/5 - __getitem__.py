@@ -22,12 +22,11 @@ print(my_list.__getitem__(3))
 
 # Example with User-Defined Class
 
+
 class Bookshelf:
 
     def __init__(self):
-        self.content = [[],
-                        [],
-                        []]
+        self.content = [[], [], []]
 
     def add_book(self, book, location):
         self.content[location].append(book)
@@ -36,7 +35,7 @@ class Bookshelf:
         self.content[location].remove(book)
 
     def __getitem__(self, location):
-        return self.content[location] 
+        return self.content[location]
 
 
 my_bookshelf = Bookshelf()
